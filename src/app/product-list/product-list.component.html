@@ -1,0 +1,11 @@
+<p>product-list works!</p>
+<table>
+    <tr *ngFor = "let i of products">
+        <td>{{i.id}}</td>
+        <td>{{i.name}}</td>
+        <td>{{i.price}}</td>
+        <td>{{i.quantity}}</td>
+        <td> <button [routerLink]="['/update-product-ui/',i.id]">Update</button></td>
+        <td> <button (click) = "DeleteProduct(i.id)">Delete</button></td>
+    </tr>
+</table>
